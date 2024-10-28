@@ -1,0 +1,71 @@
+:root {
+    --text-color-white: #FFFFFF;
+    --text-color-inverted-cyan:#00EBFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/bg-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container-timer {
+    width: 25%;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 30px;
+    display: flex;
+    transform: scale(2);
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.time h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0 5px;
+}
+
+.time > h2, 
+.time > small,
+.text-hype {
+    color: var(--text-color-white);
+}
+
+span {
+    color: var(--text-color-inverted-cyan);
+}
+
+small {
+    font-size: 1rem;
+}
+
+.text-hype {
+    position: absolute;
+    top: 20%;
+    font-size: 3rem;
+}
+
+.quandary-logo {
+    position: absolute;
+    top: 15%;
+}
