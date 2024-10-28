@@ -25,8 +25,10 @@ body {
 .container-timer {
     width: 25%;
     justify-content: center;
+    align-items: center;
     border: 2px solid white;
-    padding: 30px;
+    border-radius: 30px;
+    padding: 5px 0;
     display: flex;
     transform: scale(2);
 }
@@ -36,12 +38,12 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    margin: 20px;
+    margin: 25px;
 }
 
 .time h2 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0 0 5px;
 }
 
