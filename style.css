@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Readex+Pro:wght@160..700&display=swap');
+
 :root {
     --text-color-white: #FFFFFF;
     --text-color-inverted-cyan:#00EBFF;
+    --font-headings-amiri: "Amiri";
+    --font-text-readex: "Readex Pro";
 }
 
 * {
@@ -20,17 +24,28 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .container-timer {
-    width: 25%;
+    width: max-content;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
-    border-radius: 30px;
     padding: 5px;
     display: flex;
-    transform: scale(2);
+    transform: scale(1.75);
+    position: relative;
+    background: linear-gradient(to right bottom, #18264A 0%, #343D4C 98%);
+    border-radius: 1.25em;
+}
+
+.container-timer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    z-index: -1;
 }
 
 .time {
@@ -38,7 +53,9 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    margin: 20px;
+    align-items: center;
+    margin: 1.25em;
+    transform: translateY(-5px);
 }
 
 .time h2 {
@@ -48,9 +65,9 @@ body {
 }
 
 .time > h2, 
-.time > small,
-.text-hype {
+.time > small {
     color: var(--text-color-white);
+    font-family: var(--font-headings-amiri), sans-serif;
 }
 
 span {
@@ -59,12 +76,16 @@ span {
 
 small {
     font-size: 1rem;
+    font-weight: 700;
 }
 
 .text-hype {
+    color: var(--text-color-white);
     position: absolute;
     top: 20%;
     font-size: 3rem;
+    font-family: var(--font-text-readex), sans-serif;
+    font-weight: 700;
 }
 
 .quandary-logo {
