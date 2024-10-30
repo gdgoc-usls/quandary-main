@@ -3,7 +3,6 @@ const hours = document.querySelector('.hours');
 const mins = document.querySelector('.mins');
 const secs = document.querySelector('.secs');
 
-// Placeholder value only for LWeek Day 1
 const placeholderDate = new Date('November 18 2024 00:00:00');
 
 const updateTimer = () => {
@@ -16,7 +15,6 @@ const updateTimer = () => {
     const min = Math.floor(totalSeconds / 60) % 60;
     const sec = Math.floor(totalSeconds) % 60;
 
-    console.log(`${day} ${hour} ${min} ${sec}`);
     days.innerHTML = day < 10 ? `0${day}` : day;
     hours.innerHTML = hour < 10 ? `0${hour}` : hour;
     mins.innerHTML = min < 10 ? `0${min}` : min;
