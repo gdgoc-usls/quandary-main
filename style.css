@@ -2,9 +2,8 @@
 
 :root {
     --text-color-white: #FFFFFF;
-    --text-color-inverted-cyan:#00EBFF;
-    --font-headings-amiri: "Amiri";
-    --font-text-readex: "Readex Pro";
+    --font-amiri: "Amiri";
+    --font-readex: "Readex Pro";
 }
 
 * {
@@ -24,7 +23,6 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative;
 }
 
 .container-timer {
@@ -33,17 +31,20 @@ body {
     align-items: center;
     padding: 5px;
     display: flex;
-    transform: scale(1.75);
+    transform: scale(2.5);
     position: relative;
-    background: linear-gradient(to right bottom, #18264A 0%, #343D4C 98%);
+    background: blue;
     border-radius: 1.25em;
+    z-index: 1;
 }
 
-.container-timer::after {
+.container-timer::after, 
+.container-timer::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
+    background: red;
     z-index: -1;
 }
 
@@ -66,12 +67,12 @@ body {
 .time > h2, 
 .time > small {
     color: var(--text-color-white);
-    font-family: var(--font-text-readex), sans-serif;
+    font-family: var(--font-readex), sans-serif;
 }
 
 small {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .text-hype {
@@ -79,7 +80,7 @@ small {
     position: absolute;
     top: 20%;
     font-size: 3rem; 
-    font-family: var(--font-headings-amiri), sans-serif; 
+    font-family: var(--font-amiri), sans-serif; 
     font-weight: 400;
     background-image: linear-gradient(to right, #FBBC04 0%, #E2AFFD 42%, #AFC1FD 74%, #AFFDBA 100%);
     background-clip: text;
