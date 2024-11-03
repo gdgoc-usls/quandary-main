@@ -8,6 +8,8 @@
     --gradient-color-2: #E2AFFD;
     --gradient-color-3: #AFC1FD;
     --gradient-color-4: #AFFDBA;
+    --gradient-color-5: #51F2FF;
+    --gradient-color-6: #6E93FF;
     --scale-factor-xl: 2.5;
 }
 
@@ -22,10 +24,32 @@ body {
     background: url("./assets/bg-1.png") no-repeat fixed center / cover;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    z-index: 9999;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: red;
+    z-index: 9999;
 }
 
 .container-timer {
@@ -34,8 +58,23 @@ body {
     align-items: center;
     padding: 5px;
     display: flex;
-    transform: scale(var(--scale-factor-xl));
+    transform: scale(var(--scale-factor-xl)) translateX(0.5%);
+    
+}
+
+.container-timer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     border-radius: 1.25em;
+    padding: 2px; /* control the border thickness */
+    background: linear-gradient(to bottom, var(--gradient-color-1) 0%, var(--gradient-color-5) 52%, var(--gradient-color-6) 100%);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .time {
@@ -65,7 +104,9 @@ small {
     font-weight: 300;
 }
 
-.text-hype {
+.text-header {
+    position: absolute;
+    text-align: center;
     color: var(--text-color-white);
     position: absolute;
     top: 20%;
@@ -96,6 +137,8 @@ small {
     position: absolute;
     bottom: 10%;
     gap: 1.25em;
+    align-items: center;
+    justify-content: center;
 }
 
 .icons {
