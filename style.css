@@ -8,6 +8,13 @@
     font-style: 500;
 }
 
+@font-face {
+    font-family: 'Amari';
+    src: url('/assets/fonts/Amiri-Regular.ttf') format('ttf');
+    font-weight: 500;
+    font-style: 500;
+}
+
 :root {
     --dark-blue: #142649;
     --invert-blue: rgba(4, 67, 251, 1);
@@ -113,6 +120,7 @@ header img {
 .sponsor-text{
     padding-top: 100px;
     padding-bottom: 30px;
+    font-family: 'Amari';
 }
 .sponsor-img{
     display: flex;
