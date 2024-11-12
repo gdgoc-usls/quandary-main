@@ -8,20 +8,18 @@
     font-style: 500;
 }
 
-@font-face {
-    font-family: 'Amari';
-    src: url('/assets/fonts/Amiri-Regular.ttf') format('ttf');
-    font-weight: 500;
-    font-style: 500;
-}
-
 :root {
+    /* Colors */
     --dark-blue: #142649;
     --invert-blue: rgba(4, 67, 251, 1);
     --invert-cyan: rgba(0, 235, 255, 1);
     --invert-pink: rgba(255, 0, 124, 1);
     --invert-yellow: rgba(255, 164, 13, 1);
     --white: #ffffff;
+    /* Font Families */
+    --amiri: 'Amiri';
+    --roboto: 'Roboto';
+    --google-sans: 'Google Sans';
 }
 
 * {
@@ -31,11 +29,12 @@
 }
 
 body {
+    align-items: center;
     width: 90rem;
     height: 246.1875rem;
     background: var(--dark-blue);
     color: var(--white);
-    font-family: 'Google Sans', sans-serif;
+    font-family: var(--google-sans), sans-serif;
     overflow-x: hidden; 
 }
 
@@ -63,7 +62,7 @@ header {
     color: var(--white);
     text-decoration: none;
     text-align: center;
-    font: normal 500 1.125rem/normal 'Google Sans', sans-serif;
+    font: normal 500 1.125rem/normal var(--google-sans), sans-serif;
 }
 
 /* Custom padding inside header */
@@ -87,9 +86,13 @@ header img {
 
 .container-header h3 {
     color: var(--white);
+    font: normal 700 2rem/normal var(--amiri);
+}
+
+.container-header h3,
+.sponsor-text {
     text-align: center;
     text-shadow: 0 0 7.6px var(--white);
-    font: normal 700 1.5rem/normal 'Amiri';
 }
 
 .container-button {
@@ -105,31 +108,42 @@ header img {
     align-items: center;
     text-align: center;
     padding: 10px 24px;
-    font: normal 400 1.5rem/normal 'Roboto', sans-serif;
+    font: normal 400 1.5rem/normal var(--roboto), sans-serif;
     border: 1px solid var(--white);
     border-radius: 40px;
     background-color: transparent;
     color: var(--white);
 }
-.container-sponsors{
+
+.sponsors {
+    margin-top: 40%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.sponsor-text{
-    padding-top: 100px;
-    padding-bottom: 30px;
-    font-family: 'Amari';
+.container-sponsors {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.sponsor-img{
+
+.sponsor-text {
+    font: normal 700 5rem/normal var(--amiri), sans-serif;
+}
+
+.sponsor-logo {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 100px;
 }
-.sponsor-image-placeholder{
-    height: 50px;
-    width: 50px;
-    object-fit: contain;
-    padding: 15px;
+
+.sponsor-img { 
+    width: 100px;
+    height: 55px;
 }
