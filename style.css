@@ -26,5 +26,102 @@
 body {
     width: 90rem;
     height: 246.1875rem;
-    /*background: #142649; - display only when HTML structure is done */
+    background: var(--dark-blue);
+    color: var(--white);
+    font-family: 'Google Sans', sans-serif;
+    overflow-x: hidden; 
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    margin-top: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-item {
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    font: normal 500 1.125rem/normal 'Google Sans', sans-serif;
+}
+
+/* Custom padding inside header */
+header img {
+    padding-left: 120px;
+}
+.nav-item:last-child {
+    padding-right: 120px;
+}
+
+.landing {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.container-header h3 {
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 0 7.6px var(--white);
+    font: normal 700 1.5rem/normal 'Amiri';
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;   
+    gap: 100px;
+}
+
+.landing-btn {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 24px;
+    font: normal 400 1.5rem/normal 'Roboto', sans-serif;
+    border: 1px solid var(--white);
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--white);
+}
+.container-sponsors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sponsor-text{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+.sponsor-img{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.sponsor-image-placeholder{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    padding: 15px;
 }
