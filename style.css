@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Readex+Pro:wght@160..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('/assets/fonts/GoogleSans-Regular.woff2') format('woff2'),
+         url('/assets/fonts/GoogleSans-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: 500;
+}
+
+:root {
+    /* Colors */
+    --dark-blue: #142649;
+    --invert-blue: rgba(4, 67, 251, 1);
+    --invert-cyan: rgba(0, 235, 255, 1);
+    --invert-pink: rgba(255, 0, 124, 1);
+    --invert-yellow: rgba(255, 164, 13, 1);
+    --white: #ffffff;
+    /* Font Families */
+    --amiri: 'Amiri';
+    --roboto: 'Roboto';
+    --google-sans: 'Google Sans';
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +29,121 @@
 }
 
 body {
+    align-items: center;
     width: 90rem;
     height: 246.1875rem;
-    /*background: #142649; - display only when html structure is done */
+    background: var(--dark-blue);
+    color: var(--white);
+    font-family: var(--google-sans), sans-serif;
+    overflow-x: hidden; 
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    margin-top: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-item {
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    font: normal 500 1.125rem/normal var(--google-sans), sans-serif;
+}
+
+/* Custom padding inside header */
+header img {
+    padding-left: 120px;
+}
+.nav-item:last-child {
+    padding-right: 120px;
+}
+
+.landing {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.container-header h3 {
+    color: var(--white);
+    font: normal 700 2rem/normal var(--amiri);
+}
+
+.container-header h3,
+.sponsor-text {
+    text-align: center;
+    text-shadow: 0 0 7.6px var(--white);
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;   
+    gap: 100px;
+}
+
+.landing-btn {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 24px;
+    font: normal 400 1.5rem/normal var(--roboto), sans-serif;
+    border: 1px solid var(--white);
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--white);
+}
+
+.sponsors {
+    margin-top: 40%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-sponsors {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-text {
+    font: normal 700 5rem/normal var(--amiri), sans-serif;
+}
+
+.sponsor-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.sponsor-img { 
+    width: 100px;
+    height: 55px;
 }
