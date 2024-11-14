@@ -175,7 +175,7 @@ header img {
 }
 
 .header {
-    font: normal 700 5rem/normal var(--amiri), sans-serif;
+    font: normal 700 3rem/normal var(--amiri), sans-serif;
 }
 
 .about-desc {
@@ -212,13 +212,49 @@ header img {
 .box {
     width: 350px;
     height: 500px;
-    border: solid black 2px;
-    border-radius: 30px;
+    background-color: rgba(255, 255,255, 0.08);
+    border-radius: 50px;
     margin: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-
-.merch-name-conatainer {
+.boxes {
+    width: 300px;
+    height: 450px;
+    background-color: #0E182B;
+    border-radius: 50px;
+    
+}
+.merch-name-container {
     display: inline-flex;
     align-items: center;
-    gap: 185px;
+    gap: 475px;
+    color: #ffffff;
+}
+.colored-text {
+    background: var(--gradient, linear-gradient(266deg, #FF007C -0.43%, #FFA40D 29.87%, #00EBFF 64.6%, #0443FB 99.55%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Amiri;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.more-btn {
+    display: inline-flex;
+    height: 40px;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.more-btn h3 {
+    border-radius: 39px;
+    border: 1px solid #FFF;
+    padding: 15px 35px;
 }
