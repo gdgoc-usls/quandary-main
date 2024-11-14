@@ -253,12 +253,14 @@ header img {
     gap: 10px;
     flex-shrink: 0;
 }
-.more-btn button {
+.more-btn a {
     margin-top: 100px;
     border-radius: 39px;
     border: 1px solid #FFF;
-    padding: 10px 30px;
+    padding: 10px 25px;
     background-color: transparent;
     color: #ffffff;
     font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
 }
