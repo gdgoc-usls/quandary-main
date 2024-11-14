@@ -68,10 +68,10 @@ header {
 }
 
 /* Custom padding inside header */
-header img {
+header img, .footer-chat {
     padding-left: 120px;
 }
-.nav-item:last-child {
+.nav-item:last-child, .club-soc-med {
     padding-right: 120px;
 }
 
@@ -99,7 +99,7 @@ header img {
 }
 
 .container-header img {
-    filter: drop-shadow(0 0 3px var(--white)); /* adjust */
+    filter: drop-shadow(0 0 2px var(--white)); /* adjust */
 }
 
 .container-button {
@@ -120,6 +120,13 @@ header img {
     border-radius: 40px;
     background-color: transparent;
     color: var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.landing-btn:hover,
+.order-btn > button:hover {
+    background-color: var(--white);
+    color: var(--dark-blue);
 }
 
 .sponsors {
@@ -212,9 +219,13 @@ header img {
 .box {
     width: 350px;
     height: 500px;
-    border: solid black 2px;
-    border-radius: 30px;
+    background-color: rgba(255, 255,255, 0.08);
+    border-radius: 50px;
     margin: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxes {
@@ -239,7 +250,7 @@ header img {
     font-family: var(--amiri), sans-serif;
 }
 
-.more-btn {
+.order-btn {
     display: inline-flex;
     height: 40px;
     padding: 10px 24px;
@@ -249,7 +260,7 @@ header img {
     flex-shrink: 0;
 }
 
-.more-btn button {
+.order-btn button {
     margin-top: 100px;
     border-radius: 39px;
     border: 1px solid #FFF;
@@ -257,4 +268,61 @@ header img {
     background-color: transparent;
     color: #ffffff;
     font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5.62rem; 
+}
+
+.footer-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-chat > img {
+    width: 14.625rem;
+    height: 3rem;
+}
+
+.footer-chat > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-ref {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.footer-chat > a, 
+.footer-ref > a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.club-soc-med {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icons {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    gap: 10px;
+    align-items: center;
 }
