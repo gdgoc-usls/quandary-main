@@ -11,8 +11,8 @@
     <header>
         <img src="assets/gdg-white-logo.png" alt="GDG Logo">
         <nav class="nav">
-            <a href="#" class="nav-item">ABOUT</a>
-            <a href="#" class="nav-item">MERCH</a>
+            <a href="#about" class="nav-item">ABOUT</a>
+            <a href="#merch" class="nav-item">MERCH</a>
             <a href=#" class="nav-item">CONTACT</a>
         </nav>
     </header>  
@@ -22,8 +22,8 @@
             <img src="assets/svgs/header.svg" alt="Quandary"><img>
             <h3>See you in dreamland.</h3>
             <div class="container-button">
-                <button class="landing-btn">About</button>
-                <button class="landing-btn">Merch</button>
+                <button class="landing-btn" onclick="location.href='#about'">About</button>
+                <button class="landing-btn" onclick="location.href='#merch'">Merch</button>
             </div>
         </div>
         <img src="assets/svgs/s-7-orange.svg" alt="Orange Icon" id="star-orange" class="decor">
@@ -39,41 +39,12 @@
             </div>
         </div>
     </section>  
-    <header>
-        <img src="assets/gdg-white-logo.png" alt="GDG Logo">
-        <nav class="nav">
-            <a href="#" class="nav-item">ABOUT</a>
-            <a href="#" class="nav-item">MERCH</a>
-            <a href=#" class="nav-item">CONTACT</a>
-        </nav>
-    </header>  
-    <section class="landing"> 
-        <div class="container-header">
-            <img src="assets/svgs/header.svg" alt="Quandary"><img>
-            <h3>See you in dreamland.</h3>
-            <div class="container-button">
-                <button class="landing-btn">About</button>
-                <button class="landing-btn">Merch</button>
-            </div>
+    <section id="about" class="about-sponsors">
+        <div class="container-about-sponsors">
+            <h1 class="header">About <span class ="colored-text">Quandary</span></h1>
         </div>
-    </section>     
-    <section class="sponsors"> 
-        <div class="container-sponsors">
-            <h1 class="sponsor-text">Our Sponsors</h1>
-            <div class="sponsor-logo">
-                <img src="assets/gdg-white-logo.png" alt="Sponsor1" class="sponsor-img">
-                <img src="assets/gdg-white-logo.png" alt="Sponsor2" class="sponsor-img">
-                <img src="assets/gdg-white-logo.png" alt="Sponsor3" class="sponsor-img">
-                <img src="assets/gdg-white-logo.png" alt="Sponsor4" class="sponsor-img">
-            </div>
-        </div>
-    </section>
-    <section class = "about-sponsors">
-        <div class = "container-about-sponsors">
-            <h1 class = "header">About <span class ="quandary-text">Quandary</span></h1>
-        </div>
-        <div class = "container-desc"> 
-            <p class = "about-desc">
+        <div class="container-desc"> 
+            <p class="about-desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                 aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -81,17 +52,17 @@
             </p>
         </div>   
     </section>  
-    <section class = "merch-section">
-        <div class = "merch-header">
-            <h1 class = "merch-text"><span class = "merch-design">FEATURED MERCH</span> FROM OUR SPONSOR</h1>
+    <section id="merch" class="merch-section">
+        <div class="merch-header">
+            <h1 class="merch-text"><span class = "colored-text">FEATURED MERCH</span> FROM OUR SPONSOR</h1>
         </div>
-        <div class = "merch-container">
+        <div class="merch-container">
             <div class="box"></div>
             <div class="box"></div>
         </div>
-        <div class = "merch-name-container">
-                <h3 class = "merch-name">Merch 1</h3>
-                <h3 class = "merch-name">Merch 2</h3>
+        <div class="merch-name-container">
+                <h3 class="merch-name">Merch 1</h3>
+                <h3 class="merch-name">Merch 2</h3>
         </div>
     </section>
 </body>
