@@ -163,14 +163,14 @@ header img {
     transform: rotate(-12deg);
 }
 
-.about-sponsors {
+.about {
     width: 100vw;
-    margin-top: 40%;
+    margin-top: 20%;
     display: flex;
     flex-direction: column;
 }
 
-.container-about-sponsors {
+.container-about {
     margin-left: 10%;
 }
 
@@ -182,13 +182,13 @@ header img {
     width: 500px;
     color: #FFF;
     text-align: justify;
-    font-family: "Google Sans";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 35px; /* 145.833% */
+    font: normal 400 24px/35px var(--google-sans);
     padding-top: 60px;
     margin-left: 20%;
+}
+
+.quandary {
+    text-transform: uppercase;
 }
 
 .merch-section {
@@ -217,8 +217,44 @@ header img {
     margin: 50px 100px;
 }
 
-.merch-name-conatainer {
+.boxes {
+    width: 300px;
+    height: 450px;
+    background-color: #0E182B;
+    border-radius: 50px;
+}
+
+.merch-name-container {
     display: inline-flex;
     align-items: center;
-    gap: 185px;
+    gap: 475px;
+    color: #ffffff;
+}
+
+.colored-text {
+    background: var(--gradient, linear-gradient(266deg, #FF007C -0.43%, #FFA40D 29.87%, #00EBFF 64.6%, #0443FB 99.55%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--amiri), sans-serif;
+}
+
+.more-btn {
+    display: inline-flex;
+    height: 40px;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.more-btn button {
+    margin-top: 100px;
+    border-radius: 39px;
+    border: 1px solid #FFF;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
 }
