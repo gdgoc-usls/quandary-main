@@ -5,8 +5,8 @@
     font-family: 'Google Sans';
     src: url('/assets/fonts/GoogleSans-Regular.woff2') format('woff2'),
          url('/assets/fonts/GoogleSans-Regular.woff') format('woff');
-    font-weight: 500;
-    font-style: 500;
+    font-weight: 400;
+    font-style: 400;
 }
 
 :root {
@@ -186,7 +186,7 @@ header img, .footer-chat {
 }
 
 .about-desc {
-    width: 500px;
+    width: 600px;
     color: #FFF;
     text-align: justify;
     font: normal 400 24px/35px var(--google-sans);
@@ -211,8 +211,17 @@ header img, .footer-chat {
     font: normal 700 2rem/normal var(--amiri), sans-serif;
 }
 
+.merch-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .merch-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -221,25 +230,31 @@ header img, .footer-chat {
     height: 500px;
     background-color: rgba(255, 255,255, 0.08);
     border-radius: 50px;
-    margin: 50px 100px;
+    margin: 30px 90px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.boxes {
-    width: 300px;
-    height: 450px;
-    background-color: #0E182B;
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     border-radius: 50px;
-}
-
-.merch-name-container {
-    display: inline-flex;
-    align-items: center;
-    gap: 475px;
-    color: #ffffff;
+    padding: 2px; /* control the border thickness */
+    background: linear-gradient(
+      90deg,
+      var(--invert-blue),
+      var(--invert-cyan),
+      var(--invert-pink),
+      var(--invert-yellow)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .colored-text {
@@ -298,12 +313,34 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 0.5rem 1.75rem 0.5rem 1.5rem;
+    width: 190px;
+    position: relative;
+}
+
+.footer-chat > a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 1px; /* control the border thickness */
+    background: linear-gradient(
+      90deg,
+      var(--invert-blue),
+      var(--invert-cyan),
+      var(--invert-pink),
+      var(--invert-yellow)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .footer-ref {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     text-align: left;
 }
 
