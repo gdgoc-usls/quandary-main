@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Google Sans";
-  src: url("/assets/fonts/GoogleSans-Regular.woff2") format("woff2"),
-    url("/assets/fonts/GoogleSans-Regular.woff") format("woff");
+  src: url("/assets/fonts/GoogleSans-Medium.woff2") format("woff2"),
+    url("/assets/fonts/GoogleSans-Medium.woff") format("woff");
   font-weight: 400;
   font-style: 400;
 }
@@ -72,7 +72,7 @@ header img,
   padding-left: 120px;
 }
 .nav-item:last-child,
-.club-soc-med {
+.soc-med {
   padding-right: 120px;
 }
 
@@ -85,30 +85,24 @@ header img,
   align-items: center;
   gap: 20px;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 40px;
 }
+
 .container-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-}
-.container-header h3 {
-  color: #ffffff;
-  font-family: "Amiri", serif;
-  font-weight: 400;
-  text-align: center;
-  font-size: 0.5rem;
-  margin-top: -20px;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  gap: 0.5rem;
 }
 
 .glow-text {
-  font-size: 12rem;
-  font-family: "Amiri", serif;
-  font-weight: 700;
+  font-size: 15rem;
+  font-family: var(--amiri), sans-serif;
+  font-weight: medium;
+  line-height: normal;
   text-align: center;
+  letter-spacing: -5px;
   margin: 0 auto;
   background: linear-gradient(90deg, #0043fb, #00ebff, #ffa40d, #ff007c);
   background-clip: text;
@@ -120,54 +114,46 @@ header img,
 }
 
 .glow-text::before {
-  content: "Quandary";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: transparent;
-  background: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  filter: blur(6px);
-  opacity: 0.8;
-  z-index: -1;
+    content: "Quandary";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    background: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: blur(6px);
+    opacity: 0.8;
+    z-index: -1;
 }
 
 .glow-text::after {
-  content: "Quandary";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: transparent;
-  background: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  filter: blur(10px) brightness(1.2);
-  opacity: 0.5;
-  z-index: -2;
+    content: "Quandary";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    background: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: blur(10px) brightness(1.2);
+    opacity: 0.5;
+    z-index: -2;
 }
 .container-header h3 {
   color: #ffffff;
   font-family: "Amiri", serif;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
-  font-size: 1.25rem;
-  margin-top: -40px;
+  font-size: 2.5rem;
+  margin-top: -120px;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.8),
     0 0 12px rgba(255, 255, 255, 0.6), 0 0 16px rgba(0, 200, 255, 0.3);
   opacity: 1;
-}
-h3 {
-  color: #ffffff;
-  font-family: "Amiri", serif;
-  font-weight: 400;
-  text-align: center;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
-  margin-top: 20px;
 }
 
 .sponsor-text {
@@ -175,15 +161,11 @@ h3 {
   text-shadow: 0 0 7.6px var(--white);
 }
 
-.container-header img {
-  filter: drop-shadow(0 0 2px var(--white)); /* adjust */
-}
-
 .container-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 20px;
   gap: 100px;
 }
 
@@ -192,7 +174,7 @@ h3 {
   align-items: center;
   text-align: center;
   padding: 10px 24px;
-  font: normal 400 1.5rem / normal var(--roboto), sans-serif;
+  font: normal 400 1.5rem / normal var(--google-sans), sans-serif;
   border: 1px solid var(--white);
   border-radius: 40px;
   background-color: transparent;
@@ -207,7 +189,7 @@ h3 {
 }
 
 .sponsors {
-  margin-top: 20%; /* adjust */
+  margin-top: 25%; /* adjust */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -242,9 +224,16 @@ h3 {
 /* adjust */
 #star-orange {
   transform: rotate(-5deg);
+  position: relative;
+  bottom: 130px;
+  right: 10px;
 }
+
 #star-green {
   transform: rotate(-12deg);
+  position: relative;
+  top: 170px;
+  left: 40px;
 }
 
 .about {
@@ -320,13 +309,14 @@ h3 {
   position: absolute;
   inset: 0;
   border-radius: 50px;
-  padding: 2px; /* control the border thickness */
+  padding: 1.5px; /* control the border thickness */
   background: linear-gradient(
     90deg,
     var(--invert-blue),
     var(--invert-cyan),
     var(--invert-pink),
-    var(--invert-yellow)
+    var(--invert-yellow),
+    var(--invert-pink)
   );
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -362,6 +352,7 @@ h3 {
 }
 
 .order-btn button {
+  font: normal 400 1.5rem/normal var(--google-sans), sans-serif;
   margin-top: 100px;
   border-radius: 39px;
   border: 1px solid #fff;
@@ -409,13 +400,14 @@ footer {
   position: absolute;
   inset: 0;
   border-radius: 50px;
-  padding: 1px; /* control the border thickness */
+  padding: 1.5px; /* control the border thickness */
   background: linear-gradient(
     90deg,
     var(--invert-blue),
     var(--invert-cyan),
     var(--invert-pink),
-    var(--invert-yellow)
+    var(--invert-yellow),
+    var(--invert-pink)
   );
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -425,27 +417,36 @@ footer {
 
 .footer-ref {
   display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
+  flex-direction: row;
+  gap: 5rem;
   text-align: left;
 }
 
 .footer-chat > a,
-.footer-ref > a {
+.section-ref-item > a {
   text-decoration: none;
   color: var(--white);
 }
 
-.club-soc-med {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.section-header {
+    margin-bottom: 10px;
+}
+
+.section-ref-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.soc-med {
+    align-items: center;
 }
 
 .icons {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.jump-links {
+    margin-bottom: 10px;
 }
