@@ -161,6 +161,7 @@ header img,
 
 .sponsor-text {
   text-align: center;
+  font: normal 700 5rem/normal var(--amiri), sans-serif;
 }
 
 .container-button {
@@ -185,7 +186,7 @@ header img,
 }
 
 .landing-btn:hover,
-.order-btn > button:hover {
+.order-btn > a:hover {
   background-color: var(--white);
   color: var(--dark-blue);
 }
@@ -205,10 +206,6 @@ header img,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.sponsor-text {
-  font: normal 400 5rem/normal var(--amiri), sans-serif;
 }
 
 .sponsor-logo {
@@ -241,7 +238,7 @@ header img,
 
 .about {
   width: 100vw;
-  margin-top: 20%;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
 }
@@ -251,7 +248,7 @@ header img,
 }
 
 .header {
-  font: normal 400 5rem/normal var(--amiri), sans-serif;
+  font: normal 700 5rem/normal var(--amiri), sans-serif;
   padding-top: 30px;
 }
 
@@ -260,7 +257,7 @@ header img,
   width: 600px;
   color: #fff;
   text-align: justify;
-  font: normal 400 24px/35px var(--google-sans);
+  font: normal 400 20px/25px var(--google-sans);
   padding-top: 30px;
   margin-left: 15%;
 }
@@ -279,8 +276,26 @@ header img,
   text-transform: uppercase;
 }
 
+.ticket {
+  width: 100vw;
+  font: normal 700 3rem/normal var(--amiri), sans-serif;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.ticket-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket img {
+  transform: scale(0.8);
+}
+
 .merch-section {
-  margin-top: 40%;
+  margin-top: 5%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -293,7 +308,7 @@ header img,
 }
 
 .merch-text {
-  font: normal 400 3.5rem/normal var(--amiri), sans-serif;
+  font: normal 700 3.5rem/normal var(--amiri), sans-serif;
 }
 
 .merch-display {
@@ -321,7 +336,8 @@ header img,
   border-radius: 50px;
   margin: 30px 90px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -352,10 +368,10 @@ header img,
     --gradient,
     linear-gradient(
       266deg,
-      #ff007c -0.43%,
-      #ffa40d 29.87%,
-      #00ebff 64.6%,
-      #0443fb 99.55%
+      var(--invert-pink) -0.43%,
+      var(--invert-yellow) 29.87%,
+      var(--invert-cyan) 64.6%,
+      var(--invert-blue) 99.55%
     )
   );
   background-clip: text;
@@ -374,7 +390,8 @@ header img,
   flex-shrink: 0;
 }
 
-.order-btn button {
+.order-btn a {
+  text-decoration: none;
   font: normal 400 1.5rem/normal var(--google-sans), sans-serif;
   margin-top: 100px;
   border-radius: 39px;
