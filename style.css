@@ -490,3 +490,8 @@ footer {
 .jump-links {
     margin-bottom: 10px;
 }
+
+.highlight-about {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(255, 255, 255, 0.6), 0 0 16px rgba(0, 200, 255, 0.3);
+}
